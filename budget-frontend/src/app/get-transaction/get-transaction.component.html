@@ -1,0 +1,26 @@
+<button class="btn-new" routerLink = "/post-transaction" >Ajouter Nouvelle Transaction</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Montant</th>
+    <th>Categorie</th>
+    <th>date</th>
+    <th>dascription</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let transaction of transactions">
+    <td>{{transaction.montant}}</td>
+    <td>{{transaction.categorie}}</td>
+    <td>{{transaction.date}}</td>
+    <td>{{transaction.description}}</td>
+    <td>
+      <button class = "btn-delete" (click)="deleteTransaction(transaction.id)"> Supprimer</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
